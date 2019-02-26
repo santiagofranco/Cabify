@@ -17,6 +17,8 @@ protocol ProductListViewProtocol: class {
     func showDataErrorMessage()
     func hideLoading()
     func showTotal(_ total: Double)
+    func showPaymentSuccessMessage()
+    func showNotEnoughBalanceError()
 }
 
 protocol ProductListViewDelegate: class {
@@ -41,6 +43,8 @@ protocol ProductListInteractorDelegate: class {
     
     func didLoadProducts(_ products: [Product])
     func didLoadProductsError(_ error: CabError)
+    func didPaymentSuccess()
+    func didPaymentError(_ error: CabError)
 }
 
 protocol ProductListRouterProtocol: class {

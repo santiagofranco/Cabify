@@ -11,4 +11,7 @@ import Foundation
 enum CabError: Error {
     case unauthorized
     case data
+    
+    //Payments
+    case notEnoughBalance
 }

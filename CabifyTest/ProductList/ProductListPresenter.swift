@@ -79,8 +79,26 @@ extension ProductListPresenter: ProductListInteractorDelegate {
         case .unauthorized:
             router.goToLogin(from: view)
             return
+        default:
+            return
         }
         
     }
     
+    func didPaymentSuccess() {
+        view.showPaymentSuccessMessage()
+    }
+    
+    func didPaymentError(_ error: CabError) {
+        switch error {
+        case .notEnoughBalance:
+            view.showNotEnoughBalanceError()
+            return
+        case .unauthorized:
+            router.goToLogin(from: view)
+            return
+        default:
+            return
+        }
+    }
 }

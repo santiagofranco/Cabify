@@ -221,6 +221,35 @@ class ProductListPresenterTest: XCTestCase {
         
     }
     
+    func test_show_payment_success_message_when_payment_success() {
+        
+        presenter.didPaymentSuccess()
+        
+        XCTAssertTrue(view.showPaymentSuccessMessageCalled)
+        
+    }
+    
+    func test_show_not_enough_balance_error_when_payment_fails_with_not_enough_balance_error() {
+        
+        let givenError: CabError = .notEnoughBalance
+        
+        presenter.didPaymentError(givenError)
+        
+        XCTAssertTrue(view.showNotEnoughBalanceErrorCalled)
+        XCTAssertFalse(router.goToLoginCalled)
+        
+    }
+    
+    func test_go_to_login_when_payment_fails_with_unauthorized_error() {
+        let givenError: CabError = .unauthorized
+        
+        presenter.didPaymentError(givenError)
+        
+        XCTAssertTrue(router.goToLoginCalled)
+        XCTAssertFalse(view.showNotEnoughBalanceErrorCalled)
+        
+    }
+    
     func test_go_to_summary_when_user_tap_see_summary_button() {
         
         presenter.didTapSeeSummary()
@@ -247,6 +276,8 @@ class ProductListPresenterTest: XCTestCase {
         var hideLoadingCalled = false
         var showTotalCalled = false
         var totalShowed = 0.0
+        var showPaymentSuccessMessageCalled = false
+        var showNotEnoughBalanceErrorCalled = false
         
         func showNoInternetConnectionError() {
             showNoInternetConnectionErrorCalled = true
@@ -272,6 +303,14 @@ class ProductListPresenterTest: XCTestCase {
         func showTotal(_ total: Double) {
             showTotalCalled = true
             totalShowed = total
+        }
+        
+        func showPaymentSuccessMessage() {
+            showPaymentSuccessMessageCalled = true
+        }
+        
+        func showNotEnoughBalanceError() {
+            showNotEnoughBalanceErrorCalled = true
         }
     }
     
