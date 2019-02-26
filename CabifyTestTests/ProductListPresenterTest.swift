@@ -202,7 +202,7 @@ class ProductListPresenterTest: XCTestCase {
         presenter.didTapProduct(givenProduct)
         
         XCTAssertTrue(view.showTotalCalled)
-        XCTAssertEqual(view.totalShowed, givenTotal)
+        XCTAssertEqual(view.totalShown, givenTotal)
         
     }
     
@@ -275,7 +275,7 @@ class ProductListPresenterTest: XCTestCase {
         var showDataErrorMessageCalled = false
         var hideLoadingCalled = false
         var showTotalCalled = false
-        var totalShowed = 0.0
+        var totalShown = 0.0
         var showPaymentSuccessMessageCalled = false
         var showNotEnoughBalanceErrorCalled = false
         
@@ -302,7 +302,7 @@ class ProductListPresenterTest: XCTestCase {
         
         func showTotal(_ total: Double) {
             showTotalCalled = true
-            totalShowed = total
+            totalShown = total
         }
         
         func showPaymentSuccessMessage() {
