@@ -12,7 +12,13 @@
 		2F4EDD4F2224A1A8004DF126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4EDD4D2224A1A8004DF126 /* Main.storyboard */; };
 		2F4EDD512224A1AA004DF126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4EDD502224A1AA004DF126 /* Assets.xcassets */; };
 		2F4EDD542224A1AA004DF126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4EDD522224A1AA004DF126 /* LaunchScreen.storyboard */; };
-		2F4EDD5F2224A1AA004DF126 /* CabifyTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4EDD5E2224A1AA004DF126 /* CabifyTestTests.swift */; };
+		2FEE6B1822255C18004E3F49 /* ProductListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B1722255C18004E3F49 /* ProductListPresenterTest.swift */; };
+		2FEE6B1A22255C33004E3F49 /* ProductListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B1922255C33004E3F49 /* ProductListContract.swift */; };
+		2FEE6B1C22255CB4004E3F49 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B1B22255CB4004E3F49 /* ProductListPresenter.swift */; };
+		2FEE6B1F22255E4A004E3F49 /* MockReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B1E22255E4A004E3F49 /* MockReachabilityService.swift */; };
+		2FEE6B2322255E90004E3F49 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B2222255E90004E3F49 /* ReachabilityService.swift */; };
+		2FEE6B262225628D004E3F49 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B252225628D004E3F49 /* Product.swift */; };
+		2FEE6B282225646A004E3F49 /* CabError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B272225646A004E3F49 /* CabError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +40,14 @@
 		2F4EDD532224A1AA004DF126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F4EDD552224A1AA004DF126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F4EDD5A2224A1AA004DF126 /* CabifyTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CabifyTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F4EDD5E2224A1AA004DF126 /* CabifyTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabifyTestTests.swift; sourceTree = "<group>"; };
 		2F4EDD602224A1AA004DF126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FEE6B1722255C18004E3F49 /* ProductListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenterTest.swift; sourceTree = "<group>"; };
+		2FEE6B1922255C33004E3F49 /* ProductListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListContract.swift; sourceTree = "<group>"; };
+		2FEE6B1B22255CB4004E3F49 /* ProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
+		2FEE6B1E22255E4A004E3F49 /* MockReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReachabilityService.swift; sourceTree = "<group>"; };
+		2FEE6B2222255E90004E3F49 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
+		2FEE6B252225628D004E3F49 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		2FEE6B272225646A004E3F49 /* CabError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,9 @@
 		2F4EDD482224A1A8004DF126 /* CabifyTest */ = {
 			isa = PBXGroup;
 			children = (
+				2FEE6B2422256283004E3F49 /* Entities */,
+				2FEE6B2022255E4F004E3F49 /* Services */,
+				2FEE6B1622255BF3004E3F49 /* ProductList */,
 				2F4EDD492224A1A8004DF126 /* AppDelegate.swift */,
 				2F4EDD4B2224A1A8004DF126 /* ViewController.swift */,
 				2F4EDD4D2224A1A8004DF126 /* Main.storyboard */,
@@ -90,10 +105,53 @@
 		2F4EDD5D2224A1AA004DF126 /* CabifyTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				2F4EDD5E2224A1AA004DF126 /* CabifyTestTests.swift */,
+				2FEE6B1D22255E35004E3F49 /* Common */,
 				2F4EDD602224A1AA004DF126 /* Info.plist */,
+				2FEE6B1722255C18004E3F49 /* ProductListPresenterTest.swift */,
 			);
 			path = CabifyTestTests;
+			sourceTree = "<group>";
+		};
+		2FEE6B1622255BF3004E3F49 /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				2FEE6B1922255C33004E3F49 /* ProductListContract.swift */,
+				2FEE6B1B22255CB4004E3F49 /* ProductListPresenter.swift */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		2FEE6B1D22255E35004E3F49 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2FEE6B1E22255E4A004E3F49 /* MockReachabilityService.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2FEE6B2022255E4F004E3F49 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2FEE6B2122255E59004E3F49 /* Reachability */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2FEE6B2122255E59004E3F49 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				2FEE6B2222255E90004E3F49 /* ReachabilityService.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		2FEE6B2422256283004E3F49 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2FEE6B252225628D004E3F49 /* Product.swift */,
+				2FEE6B272225646A004E3F49 /* CabError.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +207,7 @@
 					};
 					2F4EDD592224A1AA004DF126 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 2F4EDD452224A1A8004DF126;
 					};
 				};
@@ -197,8 +256,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FEE6B2322255E90004E3F49 /* ReachabilityService.swift in Sources */,
+				2FEE6B1A22255C33004E3F49 /* ProductListContract.swift in Sources */,
+				2FEE6B282225646A004E3F49 /* CabError.swift in Sources */,
 				2F4EDD4C2224A1A8004DF126 /* ViewController.swift in Sources */,
+				2FEE6B1C22255CB4004E3F49 /* ProductListPresenter.swift in Sources */,
 				2F4EDD4A2224A1A8004DF126 /* AppDelegate.swift in Sources */,
+				2FEE6B262225628D004E3F49 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F4EDD5F2224A1AA004DF126 /* CabifyTestTests.swift in Sources */,
+				2FEE6B1F22255E4A004E3F49 /* MockReachabilityService.swift in Sources */,
+				2FEE6B1822255C18004E3F49 /* ProductListPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +462,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CA2AKZS8UU;
 				INFOPLIST_FILE = CabifyTestTests/Info.plist;
@@ -407,6 +473,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.santifranco.CabifyTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CabifyTest.app/CabifyTest";
@@ -418,6 +485,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CA2AKZS8UU;
 				INFOPLIST_FILE = CabifyTestTests/Info.plist;
