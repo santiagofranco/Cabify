@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CabifyTest.xcodeproj">
+      location = "group:../CabifyTest/ProductList/Cells/ProductTableViewCell.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../CabifyTest/ProductList/Cells/ProductTableViewCell.xib">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/santi/develop/CabifyTest/CabifyTest/Extensions.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

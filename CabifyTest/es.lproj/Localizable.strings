@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  CabifyTest
+
+  Created by Santi on 26/02/2019.
+  Copyright © 2019 Santiago Franco. All rights reserved.
+*/
+
+"products_list_title" = "Productos";
+"products_list_refresh" = "Actualizar";
+"products_list_retry" = "Reintentar";
+"products_list_total_title" = "Total";
+"products_list_pay_button" = "Pagar";
+"products_list_summary_button" = "Ver resumen";

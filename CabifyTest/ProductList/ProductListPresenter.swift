@@ -10,11 +10,11 @@ import Foundation
 
 class ProductListPresenter {
     
-    unowned let view: ProductListViewProtocol
-    unowned let interactor: ProductListInteractorProtocol
-    unowned let router: ProductListRouterProtocol
-    unowned let reachability: ReachabilityService
-    unowned let cart: CartService
+    let view: ProductListViewProtocol
+    let interactor: ProductListInteractorProtocol
+    let router: ProductListRouterProtocol
+    let reachability: ReachabilityService
+    let cart: CartService
     
     init(view: ProductListViewProtocol, interactor: ProductListInteractorProtocol, router: ProductListRouterProtocol, reachability: ReachabilityService, cart: CartService) {
         self.view = view
@@ -22,6 +22,9 @@ class ProductListPresenter {
         self.router = router
         self.reachability = reachability
         self.cart = cart
+        
+        self.view.delegate = self
+        self.interactor.delegate = self
     }
     
     fileprivate func loadProducts() {

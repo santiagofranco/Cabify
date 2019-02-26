@@ -13,3 +13,31 @@ protocol CartService: class {
     func getTotal() -> Double
     func getCurrentProducts() -> [Product]
 }
+
+class Cart: CartService {
+    
+    static let shared = Cart()
+    
+    private init(){}
+    
+    private var currentProducts: [Product] = []
+    
+    func addProduct(_ product: Product) {
+        currentProducts.append(product)
+    }
+    
+    func getTotal() -> Double {
+        var total = 0.0
+        
+        currentProducts.forEach {
+            total += $0.price
+        }
+        
+        return total //TODO: calculate total applying discounts
+    }
+    
+    func getCurrentProducts() -> [Product] {
+        return currentProducts
+    }
+}
+
