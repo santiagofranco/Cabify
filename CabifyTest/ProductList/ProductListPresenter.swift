@@ -21,12 +21,8 @@ class ProductListPresenter {
         self.router = router
         self.reachability = reachability
     }
-}
-
-extension ProductListPresenter: ProductListViewDelegate {
     
-    func viewDidLoad() {
-        
+    fileprivate func loadProducts() {
         guard reachability.isReachable() else {
             view.showNoInternetConnectionError()
             return
@@ -34,7 +30,17 @@ extension ProductListPresenter: ProductListViewDelegate {
         
         view.showLoading()
         interactor.loadProducts()
-        
+    }
+}
+
+extension ProductListPresenter: ProductListViewDelegate {
+    
+    func viewDidLoad() {
+        loadProducts()
+    }
+    
+    func didTapRefresh() {
+        loadProducts()
     }
 }
 

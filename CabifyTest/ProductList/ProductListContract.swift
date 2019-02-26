@@ -21,6 +21,7 @@ protocol ProductListViewProtocol: class {
 protocol ProductListViewDelegate: class {
     
     func viewDidLoad()
+    func didTapRefresh()
     
 }
 

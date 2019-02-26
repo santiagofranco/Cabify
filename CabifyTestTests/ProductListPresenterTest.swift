@@ -117,6 +117,38 @@ class ProductListPresenterTest: XCTestCase {
         XCTAssertTrue(view.hideLoadingCalled)
     }
     
+    func test_show_no_internet_error_when_user_taps_refresh_and_device_hasnt_internet_connection() {
+        
+        reachability.givenReachable = false
+        
+        presenter.didTapRefresh()
+        
+        XCTAssertTrue(view.showNoInternetConnectionErrorCalled)
+        XCTAssertFalse(view.showLoadingCalled)
+        
+    }
+    
+    func test_show_loading_when_user_taps_refresh() {
+        
+        reachability.givenReachable = true
+        
+        presenter.didTapRefresh()
+        
+        XCTAssertTrue(view.showLoadingCalled)
+        XCTAssertFalse(view.showNoInternetConnectionErrorCalled)
+        
+    }
+    
+    func test_load_products_when_user_taps_refresh() {
+        
+        reachability.givenReachable = true
+        
+        presenter.didTapRefresh()
+        
+        XCTAssertTrue(interactor.loadProductsCalled)
+        XCTAssertFalse(view.showNoInternetConnectionErrorCalled)
+    }
+    
     fileprivate func givenProducts() -> [Product] {
         return [
             Product(code: "VOUCHER", name: "Voucher", price: 5),
