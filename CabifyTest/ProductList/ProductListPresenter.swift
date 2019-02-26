@@ -42,6 +42,10 @@ extension ProductListPresenter: ProductListViewDelegate {
     func didTapRefresh() {
         loadProducts()
     }
+    
+    func didTapRetry() {
+        loadProducts()
+    }
 }
 
 extension ProductListPresenter: ProductListInteractorDelegate {

@@ -22,6 +22,7 @@ protocol ProductListViewDelegate: class {
     
     func viewDidLoad()
     func didTapRefresh()
+    func didTapRetry()
     
 }
 
