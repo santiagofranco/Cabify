@@ -1,0 +1,6 @@
+framework module Pods_CabifyTestTests {
+  umbrella header "Pods-CabifyTestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
