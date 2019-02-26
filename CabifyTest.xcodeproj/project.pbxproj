@@ -19,6 +19,8 @@
 		2FEE6B2322255E90004E3F49 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B2222255E90004E3F49 /* ReachabilityService.swift */; };
 		2FEE6B262225628D004E3F49 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B252225628D004E3F49 /* Product.swift */; };
 		2FEE6B282225646A004E3F49 /* CabError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B272225646A004E3F49 /* CabError.swift */; };
+		2FEE6B2B2225BE11004E3F49 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B2A2225BE11004E3F49 /* Cart.swift */; };
+		2FEE6B2D2225BE91004E3F49 /* MockCartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B2C2225BE91004E3F49 /* MockCartService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		2FEE6B2222255E90004E3F49 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
 		2FEE6B252225628D004E3F49 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		2FEE6B272225646A004E3F49 /* CabError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabError.swift; sourceTree = "<group>"; };
+		2FEE6B2A2225BE11004E3F49 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		2FEE6B2C2225BE91004E3F49 /* MockCartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCartService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				2FEE6B1E22255E4A004E3F49 /* MockReachabilityService.swift */,
+				2FEE6B2C2225BE91004E3F49 /* MockCartService.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 		2FEE6B2022255E4F004E3F49 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2FEE6B292225BDF8004E3F49 /* Cart */,
 				2FEE6B2122255E59004E3F49 /* Reachability */,
 			);
 			path = Services;
@@ -152,6 +158,14 @@
 				2FEE6B272225646A004E3F49 /* CabError.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		2FEE6B292225BDF8004E3F49 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				2FEE6B2A2225BE11004E3F49 /* Cart.swift */,
+			);
+			path = Cart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +277,7 @@
 				2FEE6B1C22255CB4004E3F49 /* ProductListPresenter.swift in Sources */,
 				2F4EDD4A2224A1A8004DF126 /* AppDelegate.swift in Sources */,
 				2FEE6B262225628D004E3F49 /* Product.swift in Sources */,
+				2FEE6B2B2225BE11004E3F49 /* Cart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +287,7 @@
 			files = (
 				2FEE6B1F22255E4A004E3F49 /* MockReachabilityService.swift in Sources */,
 				2FEE6B1822255C18004E3F49 /* ProductListPresenterTest.swift in Sources */,
+				2FEE6B2D2225BE91004E3F49 /* MockCartService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,6 +19,7 @@ class ProductListPresenterTest: XCTestCase {
     private var interactor: MockProductListInteractor!
     private var router: MockProductListRouter!
     private var reachability: MockReachabilityService!
+    private var cart: MockCartService!
     
     override func setUp() {
         
@@ -26,8 +27,9 @@ class ProductListPresenterTest: XCTestCase {
         interactor = MockProductListInteractor()
         router = MockProductListRouter()
         reachability = MockReachabilityService()
+        cart = MockCartService()
         
-        presenter = ProductListPresenter(view: view, interactor: interactor, router: router ,reachability: reachability)
+        presenter = ProductListPresenter(view: view, interactor: interactor, router: router ,reachability: reachability, cart: cart)
         
     }
 
@@ -181,6 +183,51 @@ class ProductListPresenterTest: XCTestCase {
         XCTAssertFalse(view.showNoInternetConnectionErrorCalled)
     }
     
+    func test_add_product_to_cart_when_user_taps_product() {
+        
+        let givenProduct = Product(code: "VOU", name: "Voucher", price: 10)
+        
+        presenter.didTapProduct(givenProduct)
+        
+        XCTAssertTrue(cart.addProductCalled)
+        
+    }
+    
+    func test_show_total_from_cart_service_when_user_taps_product() {
+        
+        let givenTotal = 10.0
+        cart.givenTotal = givenTotal
+        let givenProduct = Product(code: "VOU", name: "Voucher", price: 10)
+        
+        presenter.didTapProduct(givenProduct)
+        
+        XCTAssertTrue(view.showTotalCalled)
+        XCTAssertEqual(view.totalShowed, givenTotal)
+        
+    }
+    
+    func test_execute_payment_when_user_taps_on_pay_button() {
+        
+        let givenTotal = 10.0
+        cart.givenTotal = givenTotal
+        let givenProducts = self.givenProducts()
+        cart.givenProducts = givenProducts
+        
+        presenter.didTapPay()
+        
+        XCTAssertTrue(interactor.payCartCalled)
+        XCTAssertEqual(interactor.totalToPay, givenTotal)
+        XCTAssertEqual(interactor.payProducts.count, givenProducts.count)
+        
+    }
+    
+    func test_go_to_summary_when_user_tap_see_summary_button() {
+        
+        presenter.didTapSeeSummary()
+        
+        XCTAssertTrue(router.goToSummaryCalled)
+    }
+    
     fileprivate func givenProducts() -> [Product] {
         return [
             Product(code: "VOUCHER", name: "Voucher", price: 5),
@@ -198,6 +245,8 @@ class ProductListPresenterTest: XCTestCase {
         var products: [Product] = []
         var showDataErrorMessageCalled = false
         var hideLoadingCalled = false
+        var showTotalCalled = false
+        var totalShowed = 0.0
         
         func showNoInternetConnectionError() {
             showNoInternetConnectionErrorCalled = true
@@ -219,24 +268,43 @@ class ProductListPresenterTest: XCTestCase {
         func hideLoading() {
             hideLoadingCalled = true
         }
+        
+        func showTotal(_ total: Double) {
+            showTotalCalled = true
+            totalShowed = total
+        }
     }
     
     private class MockProductListInteractor: ProductListInteractorProtocol {
         weak var delegate: ProductListInteractorDelegate?
         
         var loadProductsCalled = false
+        var payCartCalled = false
+        var payProducts: [Product] = []
+        var totalToPay = 0.0
         
         func loadProducts() {
             loadProductsCalled = true
+        }
+        
+        func pay(products: [Product], total: Double) {
+            payCartCalled = true
+            payProducts = products
+            totalToPay = total
         }
     }
     
     private class MockProductListRouter: ProductListRouterProtocol {
         
         var goToLoginCalled = false
+        var goToSummaryCalled = false
         
         func goToLogin(from view: ProductListViewProtocol) {
             goToLoginCalled = true
+        }
+        
+        func goToSummary(from view: ProductListViewProtocol) {
+            goToSummaryCalled = true
         }
     }
     

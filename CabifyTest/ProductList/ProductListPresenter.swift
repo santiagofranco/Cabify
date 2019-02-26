@@ -14,12 +14,14 @@ class ProductListPresenter {
     unowned let interactor: ProductListInteractorProtocol
     unowned let router: ProductListRouterProtocol
     unowned let reachability: ReachabilityService
+    unowned let cart: CartService
     
-    init(view: ProductListViewProtocol, interactor: ProductListInteractorProtocol, router: ProductListRouterProtocol, reachability: ReachabilityService) {
+    init(view: ProductListViewProtocol, interactor: ProductListInteractorProtocol, router: ProductListRouterProtocol, reachability: ReachabilityService, cart: CartService) {
         self.view = view
         self.interactor = interactor
         self.router = router
         self.reachability = reachability
+        self.cart = cart
     }
     
     fileprivate func loadProducts() {
@@ -45,6 +47,19 @@ extension ProductListPresenter: ProductListViewDelegate {
     
     func didTapRetry() {
         loadProducts()
+    }
+    
+    func didTapProduct(_ product: Product) {
+        cart.addProduct(product)
+        view.showTotal(cart.getTotal())
+    }
+    
+    func didTapPay() {
+        interactor.pay(products: cart.getCurrentProducts(), total: cart.getTotal())
+    }
+    
+    func didTapSeeSummary() {
+        router.goToSummary(from: view)
     }
 }
 

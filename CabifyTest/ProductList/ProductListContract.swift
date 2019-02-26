@@ -16,6 +16,7 @@ protocol ProductListViewProtocol: class {
     func showProducts(_ products: [Product])
     func showDataErrorMessage()
     func hideLoading()
+    func showTotal(_ total: Double)
 }
 
 protocol ProductListViewDelegate: class {
@@ -23,13 +24,17 @@ protocol ProductListViewDelegate: class {
     func viewDidLoad()
     func didTapRefresh()
     func didTapRetry()
+    func didTapProduct(_ product: Product)
+    func didTapPay()
+    func didTapSeeSummary()
     
 }
 
 protocol ProductListInteractorProtocol: class {
     var delegate: ProductListInteractorDelegate? { get set }
     
-    func loadProducts() 
+    func loadProducts()
+    func pay(products: [Product], total: Double)
 }
 
 protocol ProductListInteractorDelegate: class {
@@ -41,4 +46,5 @@ protocol ProductListInteractorDelegate: class {
 protocol ProductListRouterProtocol: class {
     
     func goToLogin(from view: ProductListViewProtocol)
+    func goToSummary(from view: ProductListViewProtocol)
 }
