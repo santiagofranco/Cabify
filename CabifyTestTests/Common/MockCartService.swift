@@ -15,6 +15,7 @@ class MockCartService: CartService {
     var givenProducts: [Product] = []
     
     var addProductCalled = false
+    var cleanCalled = false
     
     func addProduct(_ product: Product) {
         addProductCalled = true
@@ -26,5 +27,9 @@ class MockCartService: CartService {
     
     func getCurrentProducts() -> [Product] {
         return givenProducts
+    }
+    
+    func clean() {
+        cleanCalled = true
     }
 }

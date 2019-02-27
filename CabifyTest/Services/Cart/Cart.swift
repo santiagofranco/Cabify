@@ -12,6 +12,7 @@ protocol CartService: class {
     func addProduct(_ product: Product)
     func getTotal() -> Double
     func getCurrentProducts() -> [Product]
+    func clean()
 }
 
 class Cart: CartService {
@@ -41,6 +42,10 @@ class Cart: CartService {
     
     func getCurrentProducts() -> [Product] {
         return currentProducts
+    }
+    
+    func clean() {
+        currentProducts = []
     }
 }
 

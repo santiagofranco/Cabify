@@ -29,6 +29,7 @@ protocol ProductListViewDelegate: class {
     func didTapProduct(_ product: Product)
     func didTapPay()
     func didTapSeeSummary()
+    func didTapClean()
     
 }
 

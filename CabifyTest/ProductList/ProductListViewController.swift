@@ -45,15 +45,25 @@ class ProductListViewController: UIViewController {
     fileprivate func setupNavigationItem() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "products_list_title".localized()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
+        let refreshItem = UIBarButtonItem(
             title: "products_list_refresh".localized(),
             style: .plain,
             target: self,
             action: #selector(didTapRefresh))
+        let cleanItem = UIBarButtonItem(
+            title: "products_list_clean_item_title".localized(),
+            style: .plain,
+            target: self,
+            action: #selector(didTapClean))
+        navigationItem.rightBarButtonItems = [refreshItem, cleanItem]
     }
     
     @objc fileprivate func didTapRefresh() {
         self.delegate?.didTapRefresh()
+    }
+    
+    @objc fileprivate func didTapClean() {
+        self.delegate?.didTapClean()
     }
     
     fileprivate func setupSummaryView() {

@@ -257,6 +257,19 @@ class ProductListPresenterTest: XCTestCase {
         XCTAssertTrue(router.goToSummaryCalled)
     }
     
+    func test_reset_cart_when_user_taps_on_clean() {
+        
+        presenter.didTapClean()
+        
+        XCTAssertTrue(cart.cleanCalled)
+    }
+    
+    func test_show_total_when_user_taps_clean() {
+        presenter.didTapClean()
+        
+        XCTAssertTrue(view.showTotalCalled)
+    }
+    
     fileprivate func givenProducts() -> [Product] {
         return [
             Product(code: .voucher, name: "Voucher", price: 5),

@@ -64,6 +64,11 @@ extension ProductListPresenter: ProductListViewDelegate {
     func didTapSeeSummary() {
         router.goToSummary(from: view)
     }
+    
+    func didTapClean() {
+        cart.clean()
+        view.showTotal(cart.getTotal())
+    }
 }
 
 extension ProductListPresenter: ProductListInteractorDelegate {

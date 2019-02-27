@@ -201,6 +201,19 @@ class CartTest: XCTestCase {
         XCTAssertEqual(cart.getTotal(), expectedTotal)
     }
     
+    func test_clean_current_products_when_clean_called() {
+        
+        let givenProducts = [
+            Product(code: .voucher, name: "Voucher", price: 12.0),
+            Product(code: .tshirt, name: "TShirt", price: 20.0)
+        ]
+        cart.currentProducts = givenProducts
+        
+        cart.clean()
+        
+        XCTAssertTrue(cart.getCurrentProducts().isEmpty)
+    }
+    
     
 }
 
