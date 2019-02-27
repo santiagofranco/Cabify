@@ -16,6 +16,8 @@
 		2F95C7302225ED6B00319EC1 /* ProductListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C72F2225ED6B00319EC1 /* ProductListModule.swift */; };
 		2F95C7322225EE4400319EC1 /* ProductListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C7312225EE4400319EC1 /* ProductListRouter.swift */; };
 		2F95C7342225F02700319EC1 /* SwiftReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C7332225F02700319EC1 /* SwiftReachability.swift */; };
+		2F95C7362226B41E00319EC1 /* CartTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C7352226B41E00319EC1 /* CartTest.swift */; };
+		2F95C7382226BAFF00319EC1 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C7372226BAFF00319EC1 /* Discount.swift */; };
 		2FEE6B1822255C18004E3F49 /* ProductListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B1722255C18004E3F49 /* ProductListPresenterTest.swift */; };
 		2FEE6B1A22255C33004E3F49 /* ProductListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B1922255C33004E3F49 /* ProductListContract.swift */; };
 		2FEE6B1C22255CB4004E3F49 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B1B22255CB4004E3F49 /* ProductListPresenter.swift */; };
@@ -68,6 +70,8 @@
 		2F95C72F2225ED6B00319EC1 /* ProductListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListModule.swift; sourceTree = "<group>"; };
 		2F95C7312225EE4400319EC1 /* ProductListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRouter.swift; sourceTree = "<group>"; };
 		2F95C7332225F02700319EC1 /* SwiftReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftReachability.swift; sourceTree = "<group>"; };
+		2F95C7352226B41E00319EC1 /* CartTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTest.swift; sourceTree = "<group>"; };
+		2F95C7372226BAFF00319EC1 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 		2FEE6B1722255C18004E3F49 /* ProductListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenterTest.swift; sourceTree = "<group>"; };
 		2FEE6B1922255C33004E3F49 /* ProductListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListContract.swift; sourceTree = "<group>"; };
 		2FEE6B1B22255CB4004E3F49 /* ProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 				2FEE6B1D22255E35004E3F49 /* Common */,
 				2F4EDD602224A1AA004DF126 /* Info.plist */,
 				2FEE6B1722255C18004E3F49 /* ProductListPresenterTest.swift */,
+				2F95C7352226B41E00319EC1 /* CartTest.swift */,
 			);
 			path = CabifyTestTests;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 			children = (
 				2FEE6B252225628D004E3F49 /* Product.swift */,
 				2FEE6B272225646A004E3F49 /* CabError.swift */,
+				2F95C7372226BAFF00319EC1 /* Discount.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -454,6 +460,7 @@
 				2F95C7322225EE4400319EC1 /* ProductListRouter.swift in Sources */,
 				2F95C7342225F02700319EC1 /* SwiftReachability.swift in Sources */,
 				2FEE6B472225DF8A004E3F49 /* Extensions.swift in Sources */,
+				2F95C7382226BAFF00319EC1 /* Discount.swift in Sources */,
 				2FEE6B442225DA61004E3F49 /* ProductListViewController.swift in Sources */,
 				2F95C7272225E4D200319EC1 /* ProductTableViewCell.swift in Sources */,
 				2FEE6B3A2225D694004E3F49 /* AbsNetConfiguration.swift in Sources */,
@@ -482,6 +489,7 @@
 				2FEE6B1F22255E4A004E3F49 /* MockReachabilityService.swift in Sources */,
 				2FEE6B1822255C18004E3F49 /* ProductListPresenterTest.swift in Sources */,
 				2FEE6B2D2225BE91004E3F49 /* MockCartService.swift in Sources */,
+				2F95C7362226B41E00319EC1 /* CartTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

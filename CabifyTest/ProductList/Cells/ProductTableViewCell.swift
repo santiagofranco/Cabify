@@ -41,7 +41,7 @@ class ProductTableViewCell: UITableViewCell {
     
     func bind(product: Product) {
         nameLabel.text = product.name
-        priceLabel.text = "\(product.price)€" //Currency could come from backend
+        priceLabel.text = String(format: "%.2f", product.price) + "€" //Currency could come from backend
     }
 
     

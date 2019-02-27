@@ -149,7 +149,7 @@ extension ProductListViewController: ProductListViewProtocol {
     }
     
     func showTotal(_ total: Double) {
-        totalLabel.text = "\(total)€" //Currency could come from backend
+        totalLabel.text = String(format: "%.2f", total) + "€" //Currency could come from backend
     }
     
     func showPaymentSuccessMessage() {

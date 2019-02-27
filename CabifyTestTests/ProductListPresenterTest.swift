@@ -185,7 +185,7 @@ class ProductListPresenterTest: XCTestCase {
     
     func test_add_product_to_cart_when_user_taps_product() {
         
-        let givenProduct = Product(code: "VOU", name: "Voucher", price: 10)
+        let givenProduct = Product(code: .voucher, name: "Voucher", price: 10)
         
         presenter.didTapProduct(givenProduct)
         
@@ -197,7 +197,7 @@ class ProductListPresenterTest: XCTestCase {
         
         let givenTotal = 10.0
         cart.givenTotal = givenTotal
-        let givenProduct = Product(code: "VOU", name: "Voucher", price: 10)
+        let givenProduct = Product(code: .voucher, name: "Voucher", price: 10)
         
         presenter.didTapProduct(givenProduct)
         
@@ -259,9 +259,10 @@ class ProductListPresenterTest: XCTestCase {
     
     fileprivate func givenProducts() -> [Product] {
         return [
-            Product(code: "VOUCHER", name: "Voucher", price: 5),
-            Product(code: "TSHIRT", name: "T-Shirt", price: 20),
-            Product(code: "MUG", name: "Mug", price: 7.5)
+            Product(code: .voucher, name: "Voucher", price: 5),
+            Product(code: .tshirt, name: "T-Shirt", price: 20),
+            Product(code: .mug
+                , name: "Mug", price: 7.5)
         ]
     }
 

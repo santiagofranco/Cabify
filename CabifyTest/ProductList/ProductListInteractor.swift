@@ -22,8 +22,24 @@ class ProductListInteractor: ProductListInteractorProtocol {
                 return
             }
             
-            let products = outputProducts.map {
-                return Product(code: $0.code, name: $0.name, price: $0.price)
+            let products = outputProducts.map { product -> Product in
+                
+                //Discount type should come from backend in order to have scalable and maintainable code
+                var discount: Discount? = nil
+                switch product.code {
+                case "VOUCHER":
+                    discount = .twoForOne
+                case "TSHIRT":
+                    discount = .bulkBuying
+                default:
+                    break
+                }
+                
+                return Product(
+                    code: Product.Code(rawValue: product.code) ?? .none,
+                    name: product.name,
+                    price: product.price,
+                    discount: discount)
             }
             
             self?.delegate?.didLoadProducts(products)
