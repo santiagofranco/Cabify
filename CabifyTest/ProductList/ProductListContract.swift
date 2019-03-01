@@ -17,7 +17,7 @@ protocol ProductListViewProtocol: class {
     func showDataErrorMessage()
     func hideLoading()
     func showTotal(_ total: Double)
-    func showPaymentSuccessMessage()
+    func showPaymentSuccessMessage(totalSaved: Double)
     func showNotEnoughBalanceError()
 }
 

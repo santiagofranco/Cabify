@@ -159,11 +159,17 @@ extension ProductListViewController: ProductListViewProtocol {
     }
     
     func showTotal(_ total: Double) {
-        totalLabel.text = String(format: "%.2f", total) + "€" //Currency could come from backend
+        totalLabel.text = String(format: "%.2f€", total) //Currency could come from backend
     }
     
-    func showPaymentSuccessMessage() {
-        
+    func showPaymentSuccessMessage(totalSaved: Double) {
+        UIView.animate(withDuration: 0.5, animations: {
+        }) { finished in
+            let alert = ModalViewController(message: String(format: "products_list_payment_success_total_saved".localized(), totalSaved))
+            alert.addBlurBackground()
+            alert.modalPresentationStyle = .overCurrentContext
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func showNotEnoughBalanceError() {

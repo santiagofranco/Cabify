@@ -94,7 +94,7 @@ extension ProductListPresenter: ProductListInteractorDelegate {
     }
     
     func didPaymentSuccess() {
-        view.showPaymentSuccessMessage()
+        view.showPaymentSuccessMessage(totalSaved: 20)
     }
     
     func didPaymentError(_ error: CabError) {

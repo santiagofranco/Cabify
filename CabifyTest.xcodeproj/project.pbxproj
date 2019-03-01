@@ -18,6 +18,8 @@
 		2F95C7342225F02700319EC1 /* SwiftReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C7332225F02700319EC1 /* SwiftReachability.swift */; };
 		2F95C7362226B41E00319EC1 /* CartTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C7352226B41E00319EC1 /* CartTest.swift */; };
 		2F95C7382226BAFF00319EC1 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C7372226BAFF00319EC1 /* Discount.swift */; };
+		2F95C73C22271E4A00319EC1 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C73A22271E4A00319EC1 /* ModalViewController.swift */; };
+		2F95C73D22271E4A00319EC1 /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F95C73B22271E4A00319EC1 /* ModalViewController.xib */; };
 		2FEE6B1822255C18004E3F49 /* ProductListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B1722255C18004E3F49 /* ProductListPresenterTest.swift */; };
 		2FEE6B1A22255C33004E3F49 /* ProductListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B1922255C33004E3F49 /* ProductListContract.swift */; };
 		2FEE6B1C22255CB4004E3F49 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B1B22255CB4004E3F49 /* ProductListPresenter.swift */; };
@@ -72,6 +74,8 @@
 		2F95C7332225F02700319EC1 /* SwiftReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftReachability.swift; sourceTree = "<group>"; };
 		2F95C7352226B41E00319EC1 /* CartTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTest.swift; sourceTree = "<group>"; };
 		2F95C7372226BAFF00319EC1 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
+		2F95C73A22271E4A00319EC1 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		2F95C73B22271E4A00319EC1 /* ModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
 		2FEE6B1722255C18004E3F49 /* ProductListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenterTest.swift; sourceTree = "<group>"; };
 		2FEE6B1922255C33004E3F49 /* ProductListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListContract.swift; sourceTree = "<group>"; };
 		2FEE6B1B22255CB4004E3F49 /* ProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 		2F4EDD482224A1A8004DF126 /* CabifyTest */ = {
 			isa = PBXGroup;
 			children = (
+				2F95C73922271E1E00319EC1 /* ModalView */,
 				2FEE6B302225D694004E3F49 /* AbsNet */,
 				2FEE6B3F2225D733004E3F49 /* ApiClient */,
 				2FEE6B2422256283004E3F49 /* Entities */,
@@ -166,6 +171,15 @@
 				2F95C7352226B41E00319EC1 /* CartTest.swift */,
 			);
 			path = CabifyTestTests;
+			sourceTree = "<group>";
+		};
+		2F95C73922271E1E00319EC1 /* ModalView */ = {
+			isa = PBXGroup;
+			children = (
+				2F95C73A22271E4A00319EC1 /* ModalViewController.swift */,
+				2F95C73B22271E4A00319EC1 /* ModalViewController.xib */,
+			);
+			path = ModalView;
 			sourceTree = "<group>";
 		};
 		2FEE6B1622255BF3004E3F49 /* ProductList */ = {
@@ -367,6 +381,7 @@
 			files = (
 				2F95C72B2225E84000319EC1 /* Localizable.strings in Resources */,
 				2F4EDD542224A1AA004DF126 /* LaunchScreen.storyboard in Resources */,
+				2F95C73D22271E4A00319EC1 /* ModalViewController.xib in Resources */,
 				2F95C7282225E4D200319EC1 /* ProductTableViewCell.xib in Resources */,
 				2FEE6B452225DA61004E3F49 /* ProductListViewController.xib in Resources */,
 				2F4EDD512224A1AA004DF126 /* Assets.xcassets in Resources */,
@@ -472,6 +487,7 @@
 				2FEE6B412225D760004E3F49 /* GetProductsUseCase.swift in Sources */,
 				2FEE6B1C22255CB4004E3F49 /* ProductListPresenter.swift in Sources */,
 				2FEE6B2F2225D60D004E3F49 /* ProductListInteractor.swift in Sources */,
+				2F95C73C22271E4A00319EC1 /* ModalViewController.swift in Sources */,
 				2F95C7302225ED6B00319EC1 /* ProductListModule.swift in Sources */,
 				2FEE6B382225D694004E3F49 /* ApiService.swift in Sources */,
 				2FEE6B392225D694004E3F49 /* AbsNetError.swift in Sources */,
