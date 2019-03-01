@@ -15,3 +15,6 @@
 "products_list_clean_item_title" = "Clean";
 "products_list_payment_success" = "Payment successfully.";
 "products_list_payment_success_total_saved" = "Payment successfully. We have discounted you %.2f€.";
+"product_list_no_internet_message" = "Device has not internet connection";
+"product_list_data_error" = "Something went wrong loading products";
+"product_list_not_enough_balance_error" = "There is not enough balance for the purchase in your account.";

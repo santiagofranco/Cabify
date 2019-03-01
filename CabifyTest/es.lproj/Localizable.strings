@@ -15,3 +15,6 @@
 "products_list_clean_item_title" = "Limpiar";
 "products_list_payment_success" = "Pago satisfactorio.";
 "products_list_payment_success_total_saved" = "Pago satisfactorio. Se te aplicó un descuento de %.2f€";
+"product_list_no_internet_message" = "El dispositivo no tiene conexión";
+"product_list_data_error" = "Algo fué mal cargando los productos";
+"product_list_not_enough_balance_error" = "No hay suficiente saldo para la compra en tu cuenta.";

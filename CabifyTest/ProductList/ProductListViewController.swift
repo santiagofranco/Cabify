@@ -23,6 +23,22 @@ class ProductListViewController: UIViewController {
     var delegate: ProductListViewDelegate?
     var products: [Product] = []
     
+    lazy var refreshItem: UIBarButtonItem = {
+        UIBarButtonItem(
+            title: "products_list_refresh".localized(),
+            style: .plain,
+            target: self,
+            action: #selector(didTapRefresh))
+    }()
+    
+    lazy var cleanItem: UIBarButtonItem = {
+        UIBarButtonItem(
+            title: "products_list_clean_item_title".localized(),
+            style: .plain,
+            target: self,
+            action: #selector(didTapClean))
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,16 +61,8 @@ class ProductListViewController: UIViewController {
     fileprivate func setupNavigationItem() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "products_list_title".localized()
-        let refreshItem = UIBarButtonItem(
-            title: "products_list_refresh".localized(),
-            style: .plain,
-            target: self,
-            action: #selector(didTapRefresh))
-        let cleanItem = UIBarButtonItem(
-            title: "products_list_clean_item_title".localized(),
-            style: .plain,
-            target: self,
-            action: #selector(didTapClean))
+        
+        
         navigationItem.rightBarButtonItems = [refreshItem, cleanItem]
     }
     
@@ -80,9 +88,12 @@ class ProductListViewController: UIViewController {
         payButton.setTitleColor(.white, for: .normal)
         payButton.layer.backgroundColor = UIColor.purple.cgColor
         payButton.layer.cornerRadius = payButton.frame.height / 2
+        
+        retryButton.setTitle("products_list_retry".localized(), for: .normal)
     }
     
     @IBAction func didTapRetry(_ sender: Any) {
+        resetView()
         self.delegate?.didTapRetry()
     }
     
@@ -97,6 +108,25 @@ class ProductListViewController: UIViewController {
     fileprivate func updateLoading(showing: Bool) {
         activityIndicator.isHidden = !showing
         tableView.isHidden = showing
+    }
+    
+    fileprivate func showMessage(_ message: String, canRetry: Bool = true) {
+        messageLabel.text = message
+        tableView.isHidden = true
+        summaryView.isHidden = true
+        cleanItem.isEnabled = false
+        refreshItem.isEnabled = false
+        messageLabel.isHidden = false
+        retryButton.isHidden = !canRetry
+    }
+    
+    fileprivate func resetView() {
+        tableView.isHidden = false
+        summaryView.isHidden = false
+        cleanItem.isEnabled = true
+        refreshItem.isEnabled = true
+        messageLabel.isHidden = true
+        retryButton.isHidden = true
     }
     
     
@@ -138,7 +168,7 @@ extension ProductListViewController: ProductTableViewCellDelegate {
 extension ProductListViewController: ProductListViewProtocol {
     
     func showNoInternetConnectionError() {
-        
+        showMessage("product_list_no_internet_message".localized(), canRetry: false)
     }
     
     func showLoading() {
@@ -151,7 +181,7 @@ extension ProductListViewController: ProductListViewProtocol {
     }
     
     func showDataErrorMessage() {
-        
+        showMessage("product_list_data_error".localized())
     }
     
     func hideLoading() {
@@ -176,7 +206,10 @@ extension ProductListViewController: ProductListViewProtocol {
     }
     
     func showNotEnoughBalanceError() {
-        
+        showMessage("product_list_not_enough_balance_error".localized(), canRetry: false)
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+            self.resetView()
+        }
     }
     
     
