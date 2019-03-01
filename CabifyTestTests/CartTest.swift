@@ -214,7 +214,34 @@ class CartTest: XCTestCase {
         XCTAssertTrue(cart.getCurrentProducts().isEmpty)
     }
     
+    func test_discounted_total_for_bulk_buying() {
+        
+        let givenPrice = 30.0
+        let givenCode = Product.Code.tshirt
+        let givenProduct = Product(code: givenCode, name: "T-Shirt", price: givenPrice, discount: .bulkBuying)
+        
+        cart.addProduct(givenProduct)
+        cart.addProduct(givenProduct)
+        cart.addProduct(givenProduct)
+        
+        let expectedDiscountedTotal = givenCode.totalDiscounted * Double(cart.currentProducts.count)
+        XCTAssertEqual(cart.getDiscountedTotal(), expectedDiscountedTotal)
+    }
     
+    func test_discounted_total_for_2_x_1() {
+        
+        let givenPrice = 10.0
+        let givenProduct = Product(code: .voucher, name: "Voucher", price: givenPrice, discount: .twoForOne)
+        
+        cart.addProduct(givenProduct)
+        cart.addProduct(givenProduct)
+        cart.addProduct(givenProduct)
+        cart.addProduct(givenProduct)
+        
+        let expectedDiscountedTotal = (givenPrice * Double(cart.getCurrentProducts().count)) / 2
+        XCTAssertEqual(cart.getDiscountedTotal(), expectedDiscountedTotal)
+        
+    }
 }
 
 extension Cart {

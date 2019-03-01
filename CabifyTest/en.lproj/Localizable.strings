@@ -13,4 +13,5 @@
 "products_list_pay_button" = "Checkout";
 "products_list_summary_button" = "See summary";
 "products_list_clean_item_title" = "Clean";
-"products_list_payment_success_total_saved" = "Payment successfully. We have discounted you %.2f€";
+"products_list_payment_success" = "Payment successfully.";
+"products_list_payment_success_total_saved" = "Payment successfully. We have discounted you %.2f€.";

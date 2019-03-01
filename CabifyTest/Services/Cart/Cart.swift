@@ -13,6 +13,7 @@ protocol CartService: class {
     func getTotal() -> Double
     func getCurrentProducts() -> [Product]
     func clean()
+    func getDiscountedTotal() -> Double
 }
 
 class Cart: CartService {
@@ -46,6 +47,16 @@ class Cart: CartService {
     
     func clean() {
         currentProducts = []
+    }
+    
+    func getDiscountedTotal() -> Double {
+        let total = getTotal()
+        var totalNoDiscounted = 0.0
+        currentProducts.forEach {
+            totalNoDiscounted += $0.price
+        }
+        
+        return totalNoDiscounted - total
     }
 }
 

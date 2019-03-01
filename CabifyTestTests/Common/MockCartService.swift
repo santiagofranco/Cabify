@@ -12,6 +12,7 @@ import Foundation
 class MockCartService: CartService {
     
     var givenTotal = 0.0
+    var givenDiscountedTotal = 0.0
     var givenProducts: [Product] = []
     
     var addProductCalled = false
@@ -31,5 +32,9 @@ class MockCartService: CartService {
     
     func clean() {
         cleanCalled = true
+    }
+    
+    func getDiscountedTotal() -> Double {
+        return givenDiscountedTotal
     }
 }

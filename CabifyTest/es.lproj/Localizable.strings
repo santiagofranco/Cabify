@@ -13,4 +13,5 @@
 "products_list_pay_button" = "Pagar";
 "products_list_summary_button" = "Ver resumen";
 "products_list_clean_item_title" = "Limpiar";
+"products_list_payment_success" = "Pago satisfactorio.";
 "products_list_payment_success_total_saved" = "Pago satisfactorio. Se te aplicó un descuento de %.2f€";

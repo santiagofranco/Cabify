@@ -165,7 +165,10 @@ extension ProductListViewController: ProductListViewProtocol {
     func showPaymentSuccessMessage(totalSaved: Double) {
         UIView.animate(withDuration: 0.5, animations: {
         }) { finished in
-            let alert = ModalViewController(message: String(format: "products_list_payment_success_total_saved".localized(), totalSaved))
+            
+            let message = totalSaved > 0 ? String(format: "products_list_payment_success_total_saved".localized(), totalSaved) : "products_list_payment_success".localized()
+            
+            let alert = ModalViewController(message: message)
             alert.addBlurBackground()
             alert.modalPresentationStyle = .overCurrentContext
             self.present(alert, animated: true, completion: nil)
