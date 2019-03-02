@@ -55,6 +55,7 @@ extension ProductListPresenter: ProductListViewDelegate {
     func didTapProduct(_ product: Product) {
         cart.addProduct(product)
         view.showTotal(cart.getTotal())
+        view.enableCheckout()
     }
     
     func didTapPay() {
@@ -64,10 +65,18 @@ extension ProductListPresenter: ProductListViewDelegate {
     func didTapClean() {
         cart.clean()
         view.showTotal(cart.getTotal())
+        view.disableCheckout()
     }
     
     func viewDidAppear() {
-        view.showTotal(cart.getTotal())
+        let total = cart.getTotal()
+        view.showTotal(total)
+        
+        if total > 0 {
+            view.enableCheckout()
+            return
+        }
+        view.disableCheckout()
     }
 }
 

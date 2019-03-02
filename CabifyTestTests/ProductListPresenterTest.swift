@@ -276,6 +276,45 @@ class ProductListPresenterTest: XCTestCase {
         XCTAssertEqual(view.totalShown, givenTotal)
     }
     
+    func test_enable_checkout_button_when_user_taps_a_product() {
+        
+        let givenProduct = Product(code: .voucher, name: "VOUCHER", price: 10.0)
+        
+        presenter.didTapProduct(givenProduct)
+        
+        XCTAssertTrue(view.enableCheckoutCalled)
+        
+    }
+    
+    func test_disable_checkout_button_when_user_taps_clean_cart() {
+        
+        presenter.didTapClean()
+        
+        XCTAssertTrue(view.disableCheckoutCalled)
+    }
+    
+    func test_disable_checkout_button_when_view_did_appear_and_total_is_0() {
+        
+        cart.givenTotal = 0.0
+        
+        presenter.viewDidAppear()
+        
+        XCTAssertTrue(view.disableCheckoutCalled)
+        XCTAssertFalse(view.enableCheckoutCalled)
+        
+    }
+    
+    func test_enable_checkout_button_when_view_did_appear_and_total_greater_than_0() {
+        
+        cart.givenTotal = 10.0
+        
+        presenter.viewDidAppear()
+        
+        XCTAssertTrue(view.enableCheckoutCalled)
+        XCTAssertFalse(view.disableCheckoutCalled)
+        
+    }
+    
     fileprivate func givenProducts() -> [Product] {
         return [
             Product(code: .voucher, name: "Voucher", price: 5),
@@ -299,6 +338,8 @@ class ProductListPresenterTest: XCTestCase {
         var showPaymentSuccessMessageCalled = false
         var showNotEnoughBalanceErrorCalled = false
         var totalSavedShown = 0.0
+        var enableCheckoutCalled = false
+        var disableCheckoutCalled = false
         
         func showNoInternetConnectionError() {
             showNoInternetConnectionErrorCalled = true
@@ -333,6 +374,14 @@ class ProductListPresenterTest: XCTestCase {
         
         func showNotEnoughBalanceError() {
             showNotEnoughBalanceErrorCalled = true
+        }
+        
+        func enableCheckout() {
+            enableCheckoutCalled = true
+        }
+        
+        func disableCheckout() {
+            disableCheckoutCalled = true
         }
     }
     

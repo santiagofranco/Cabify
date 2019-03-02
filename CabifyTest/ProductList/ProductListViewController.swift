@@ -92,6 +92,7 @@ class ProductListViewController: UIViewController {
         payButton.setTitleColor(.white, for: .normal)
         payButton.layer.backgroundColor = UIColor.purple.cgColor
         payButton.layer.cornerRadius = payButton.frame.height / 2
+        payButton.isHidden = true
         
         retryButton.setTitle("products_list_retry".localized(), for: .normal)
     }
@@ -199,5 +200,12 @@ extension ProductListViewController: ProductListViewProtocol {
         }
     }
     
+    func enableCheckout() {
+        payButton.isHidden = false
+    }
+    
+    func disableCheckout() {
+        payButton.isHidden = true
+    }
     
 }

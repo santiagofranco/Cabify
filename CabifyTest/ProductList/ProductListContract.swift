@@ -18,6 +18,8 @@ protocol ProductListViewProtocol: class {
     func hideLoading()
     func showTotal(_ total: Double)
     func showNotEnoughBalanceError()
+    func enableCheckout()
+    func disableCheckout()
 }
 
 protocol ProductListViewDelegate: class {
