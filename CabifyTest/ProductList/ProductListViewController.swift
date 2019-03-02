@@ -66,7 +66,8 @@ class ProductListViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "products_list_title".localized()
         
-        
+        refreshItem.tintColor = .purple
+        cleanItem.tintColor = .purple
         navigationItem.rightBarButtonItems = [refreshItem, cleanItem]
     }
     

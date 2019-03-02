@@ -29,6 +29,7 @@ class SummaryViewController: UIViewController {
         
         titleLabel.text = "summary_title".localized()
         closeButton.setTitle("summary_close".localized(), for: .normal)
+        closeButton.setTitleColor(.purple, for: .normal)
         
         tableView.delegate = self
         tableView.dataSource = self
