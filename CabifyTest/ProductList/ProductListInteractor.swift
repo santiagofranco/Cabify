@@ -8,6 +8,15 @@
 
 import Foundation
 
+
+/**
+ 
+ This class contains all the access to data needed in this module.
+ We use a protocol for this class, because we are injecting this implementation in the presenter.
+ We can change easily this implementation without break nothing.
+ 
+ */
+
 class ProductListInteractor: ProductListInteractorProtocol {
     
     weak var delegate: ProductListInteractorDelegate?

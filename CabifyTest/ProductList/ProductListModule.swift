@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+
+/**
+ This class makes all the dependecy injection for the module
+ */
+
 class ProductListModule {
     
     lazy var view: ProductListViewController = {

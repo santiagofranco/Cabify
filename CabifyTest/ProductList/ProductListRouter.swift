@@ -9,10 +9,18 @@
 import Foundation
 import UIKit
 
+
+/**
+ This class makes the navigation to other screens.
+ 
+ We use a protocol for this class, because we are injecting this implementation in the presenter.
+ We can change easily this implementation without break nothing.
+ */
+
 class ProductListRouter: ProductListRouterProtocol {
     
     func goToLogin(from view: ProductListViewProtocol) {
-        //TODO: This method is just an example for test
+        // This method is just an example for test
     }
     
     func goToSummary(from view: ProductListViewProtocol) {

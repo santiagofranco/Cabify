@@ -21,12 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    
+    // ** Here we configure networking lib
     fileprivate func setupAbsNet() {
         let config = AbsNetConfiguration(url: "https://api.myjson.com/")
         ApiService.with(configuration: config)
     }
     
+    //** Here we configure initial window due to we are not using storyboard
     fileprivate func setupWindow() {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
