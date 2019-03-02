@@ -19,7 +19,7 @@ import Foundation
 
 class ProductListPresenter {
     
-    let view: ProductListViewProtocol
+    unowned let view: ProductListViewProtocol
     let interactor: ProductListInteractorProtocol
     let router: ProductListRouterProtocol
     let reachability: ReachabilityService

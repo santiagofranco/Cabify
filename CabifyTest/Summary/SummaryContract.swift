@@ -20,6 +20,7 @@ protocol SummaryViewProtocol: class {
     
     func showProducts(_ products: [ProductSummary])
     func showTotalDiscounted(_ total: Double)
+    func showPaymentSuccessMessage()
 }
 
 protocol SummaryViewDelegate: class {

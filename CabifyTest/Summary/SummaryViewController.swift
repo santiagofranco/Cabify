@@ -92,4 +92,16 @@ extension SummaryViewController: SummaryViewProtocol {
         totalLabel.text = String(format: "summary_total".localized(), total)
     }
     
+    func showPaymentSuccessMessage() {
+        UIView.animate(withDuration: 0.5, animations: {
+        }) { finished in
+            
+            let message = "products_list_payment_success".localized()
+            let alert = ModalViewController(message: message)
+            alert.addBlurBackground()
+            alert.modalPresentationStyle = .overCurrentContext
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
 }

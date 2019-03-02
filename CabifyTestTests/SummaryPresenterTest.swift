@@ -68,6 +68,12 @@ class SummaryPresenterTest: XCTestCase {
         
     }
 
+    func test_show_payment_success_message_when_view_did_load() {
+        
+        presenter.viewDidLoad()
+        
+        XCTAssertTrue(view.showPaymentSuccessMessageCalled)
+    }
     
     fileprivate func givenProducts() -> [Product] {
         return [
@@ -85,6 +91,7 @@ class SummaryPresenterTest: XCTestCase {
         var products: [ProductSummary] = []
         var showTotalCalled = false
         var total: Double = 0.0
+        var showPaymentSuccessMessageCalled = false
         
         func showProducts(_ products: [ProductSummary]) {
             showProductsCalled = true
@@ -94,6 +101,10 @@ class SummaryPresenterTest: XCTestCase {
         func showTotalDiscounted(_ total: Double) {
             showTotalCalled = true
             self.total = total
+        }
+        
+        func showPaymentSuccessMessage() {
+            showPaymentSuccessMessageCalled = true
         }
         
     }

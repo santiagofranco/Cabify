@@ -24,10 +24,6 @@ class SummaryModule {
         Cart.shared
     }()
     
-//    lazy var presenter: SummaryPresenter = {
-//        SummaryPresenter(view: self.view, cart: self.cart)
-//    }()
-    
     func provide() -> UIViewController {
         let presenter = SummaryPresenter(view: self.view, cart: self.cart)
         view.delegate = presenter

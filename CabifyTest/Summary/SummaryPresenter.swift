@@ -19,7 +19,7 @@ import Foundation
 
 class SummaryPresenter {
     
-    let view: SummaryViewProtocol
+    unowned let view: SummaryViewProtocol
     let cart: CartService
     
     init(view: SummaryViewProtocol, cart: CartService) {
@@ -32,6 +32,7 @@ class SummaryPresenter {
 extension SummaryPresenter: SummaryViewDelegate {
     
     func viewDidLoad() {
+        view.showPaymentSuccessMessage()
         let summary = cart.getSummary()
         view.showProducts(summary.products)
         view.showTotalDiscounted(summary.discountedTotal)
