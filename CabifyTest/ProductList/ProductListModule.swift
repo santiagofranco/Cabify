@@ -45,7 +45,10 @@ class ProductListModule {
     }
     
     func provide() -> UIViewController {
-        _ = ProductListPresenter(view: view, interactor: interactor, router: router, reachability: reachability, cart: cart)
+        let presenter = ProductListPresenter(view: view, interactor: interactor, router: router, reachability: reachability, cart: cart)
+        
+        view.delegate = presenter
+        interactor.delegate = presenter
         return view
     }
     

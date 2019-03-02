@@ -31,9 +31,6 @@ class ProductListPresenter {
         self.router = router
         self.reachability = reachability
         self.cart = cart
-        
-        self.view.delegate = self
-        self.interactor.delegate = self
     }
     
     fileprivate func loadProducts() {
