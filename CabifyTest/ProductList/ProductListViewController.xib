@@ -16,7 +16,6 @@
                 <outlet property="messageLabel" destination="1gK-u9-MeO" id="VeB-qq-IrG"/>
                 <outlet property="payButton" destination="yWt-v8-rZA" id="reO-xD-HNb"/>
                 <outlet property="retryButton" destination="8GE-Ys-wbW" id="fxJ-3y-J0K"/>
-                <outlet property="summaryButton" destination="GQi-sB-xsF" id="uVP-u3-dYq"/>
                 <outlet property="summaryView" destination="5PX-1C-hhA" id="tDr-Fa-yXC"/>
                 <outlet property="tableView" destination="k5g-4j-4l9" id="iEb-05-mzy"/>
                 <outlet property="totalLabel" destination="vWl-Ig-A0c" id="hb0-Z9-t5A"/>
@@ -76,7 +75,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWt-v8-rZA">
-                            <rect key="frame" x="215" y="20" width="100" height="30"/>
+                            <rect key="frame" x="215" y="35" width="100" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="RzS-Rq-NUT"/>
                                 <constraint firstAttribute="height" constant="30" id="ixI-t4-hHS"/>
@@ -87,26 +86,16 @@
                                 <action selector="didTapPayButton:" destination="-1" eventType="touchUpInside" id="3Ej-RN-vOz"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQi-sB-xsF">
-                            <rect key="frame" x="268" y="55" width="47" height="28"/>
-                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
-                            <state key="normal" title="Button"/>
-                            <connections>
-                                <action selector="didTapSummaryButton:" destination="-1" eventType="touchUpInside" id="aQD-Yb-RUX"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="Ylx-Jg-joy" firstAttribute="top" secondItem="5PX-1C-hhA" secondAttribute="top" constant="20" id="86I-M8-DkI"/>
                         <constraint firstItem="Ylx-Jg-joy" firstAttribute="leading" secondItem="5PX-1C-hhA" secondAttribute="leading" constant="20" id="Bqf-Be-F9s"/>
-                        <constraint firstItem="yWt-v8-rZA" firstAttribute="top" secondItem="5PX-1C-hhA" secondAttribute="top" constant="20" id="VF7-9G-PaT"/>
+                        <constraint firstItem="yWt-v8-rZA" firstAttribute="centerY" secondItem="5PX-1C-hhA" secondAttribute="centerY" id="VIR-nK-TFL"/>
                         <constraint firstAttribute="height" constant="100" id="ebe-CQ-Tko"/>
                         <constraint firstItem="vWl-Ig-A0c" firstAttribute="top" secondItem="Ylx-Jg-joy" secondAttribute="bottom" constant="5" id="fk4-xy-g3d"/>
-                        <constraint firstItem="GQi-sB-xsF" firstAttribute="top" secondItem="yWt-v8-rZA" secondAttribute="bottom" constant="5" id="kFM-2G-JN7"/>
                         <constraint firstItem="vWl-Ig-A0c" firstAttribute="leading" secondItem="5PX-1C-hhA" secondAttribute="leading" constant="20" id="kFg-v6-bjO"/>
                         <constraint firstAttribute="trailing" secondItem="yWt-v8-rZA" secondAttribute="trailing" constant="20" id="ksF-WV-faS"/>
-                        <constraint firstAttribute="trailing" secondItem="GQi-sB-xsF" secondAttribute="trailing" constant="20" id="xdT-CO-rAl"/>
                     </constraints>
                 </view>
             </subviews>

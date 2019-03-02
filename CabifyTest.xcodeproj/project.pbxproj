@@ -20,6 +20,18 @@
 		2F95C7382226BAFF00319EC1 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C7372226BAFF00319EC1 /* Discount.swift */; };
 		2F95C73C22271E4A00319EC1 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C73A22271E4A00319EC1 /* ModalViewController.swift */; };
 		2F95C73D22271E4A00319EC1 /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F95C73B22271E4A00319EC1 /* ModalViewController.xib */; };
+		2F95C77F22297B2700319EC1 /* SummaryPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C77E22297B2600319EC1 /* SummaryPresenterTest.swift */; };
+		2F95C78122297B3500319EC1 /* SummaryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C78022297B3500319EC1 /* SummaryContract.swift */; };
+		2F95C78322297BD700319EC1 /* SummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C78222297BD700319EC1 /* SummaryPresenter.swift */; };
+		2F95C7852229837900319EC1 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C7842229837900319EC1 /* Summary.swift */; };
+		2F95C787222983B200319EC1 /* ProductSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C786222983B200319EC1 /* ProductSummary.swift */; };
+		2F95C78A2229FA9100319EC1 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C7882229FA9100319EC1 /* SummaryViewController.swift */; };
+		2F95C78B2229FA9100319EC1 /* SummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F95C7892229FA9100319EC1 /* SummaryViewController.xib */; };
+		2F95C78F2229FBED00319EC1 /* ProductSummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C78D2229FBED00319EC1 /* ProductSummaryTableViewCell.swift */; };
+		2F95C7902229FBED00319EC1 /* ProductSummaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F95C78E2229FBED00319EC1 /* ProductSummaryTableViewCell.xib */; };
+		2F95C7932229FC1300319EC1 /* ProductSummaryHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C7912229FC1300319EC1 /* ProductSummaryHeaderTableViewCell.swift */; };
+		2F95C7942229FC1300319EC1 /* ProductSummaryHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F95C7922229FC1300319EC1 /* ProductSummaryHeaderTableViewCell.xib */; };
+		2F95C7962229FE8E00319EC1 /* SummaryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95C7952229FE8E00319EC1 /* SummaryModule.swift */; };
 		2FEE6B1822255C18004E3F49 /* ProductListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B1722255C18004E3F49 /* ProductListPresenterTest.swift */; };
 		2FEE6B1A22255C33004E3F49 /* ProductListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B1922255C33004E3F49 /* ProductListContract.swift */; };
 		2FEE6B1C22255CB4004E3F49 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6B1B22255CB4004E3F49 /* ProductListPresenter.swift */; };
@@ -76,6 +88,18 @@
 		2F95C7372226BAFF00319EC1 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 		2F95C73A22271E4A00319EC1 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		2F95C73B22271E4A00319EC1 /* ModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
+		2F95C77E22297B2600319EC1 /* SummaryPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryPresenterTest.swift; sourceTree = "<group>"; };
+		2F95C78022297B3500319EC1 /* SummaryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryContract.swift; sourceTree = "<group>"; };
+		2F95C78222297BD700319EC1 /* SummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryPresenter.swift; sourceTree = "<group>"; };
+		2F95C7842229837900319EC1 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
+		2F95C786222983B200319EC1 /* ProductSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSummary.swift; sourceTree = "<group>"; };
+		2F95C7882229FA9100319EC1 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		2F95C7892229FA9100319EC1 /* SummaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryViewController.xib; sourceTree = "<group>"; };
+		2F95C78D2229FBED00319EC1 /* ProductSummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSummaryTableViewCell.swift; sourceTree = "<group>"; };
+		2F95C78E2229FBED00319EC1 /* ProductSummaryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSummaryTableViewCell.xib; sourceTree = "<group>"; };
+		2F95C7912229FC1300319EC1 /* ProductSummaryHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSummaryHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		2F95C7922229FC1300319EC1 /* ProductSummaryHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSummaryHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		2F95C7952229FE8E00319EC1 /* SummaryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryModule.swift; sourceTree = "<group>"; };
 		2FEE6B1722255C18004E3F49 /* ProductListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenterTest.swift; sourceTree = "<group>"; };
 		2FEE6B1922255C33004E3F49 /* ProductListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListContract.swift; sourceTree = "<group>"; };
 		2FEE6B1B22255CB4004E3F49 /* ProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
@@ -152,6 +176,7 @@
 				2FEE6B2422256283004E3F49 /* Entities */,
 				2FEE6B2022255E4F004E3F49 /* Services */,
 				2FEE6B1622255BF3004E3F49 /* ProductList */,
+				2F95C77D222979BC00319EC1 /* Summary */,
 				2F4EDD492224A1A8004DF126 /* AppDelegate.swift */,
 				2FEE6B462225DF8A004E3F49 /* Extensions.swift */,
 				2F4EDD502224A1AA004DF126 /* Assets.xcassets */,
@@ -169,6 +194,7 @@
 				2F4EDD602224A1AA004DF126 /* Info.plist */,
 				2FEE6B1722255C18004E3F49 /* ProductListPresenterTest.swift */,
 				2F95C7352226B41E00319EC1 /* CartTest.swift */,
+				2F95C77E22297B2600319EC1 /* SummaryPresenterTest.swift */,
 			);
 			path = CabifyTestTests;
 			sourceTree = "<group>";
@@ -180,6 +206,30 @@
 				2F95C73B22271E4A00319EC1 /* ModalViewController.xib */,
 			);
 			path = ModalView;
+			sourceTree = "<group>";
+		};
+		2F95C77D222979BC00319EC1 /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				2F95C78C2229FBD600319EC1 /* Cells */,
+				2F95C78022297B3500319EC1 /* SummaryContract.swift */,
+				2F95C78222297BD700319EC1 /* SummaryPresenter.swift */,
+				2F95C7882229FA9100319EC1 /* SummaryViewController.swift */,
+				2F95C7892229FA9100319EC1 /* SummaryViewController.xib */,
+				2F95C7952229FE8E00319EC1 /* SummaryModule.swift */,
+			);
+			path = Summary;
+			sourceTree = "<group>";
+		};
+		2F95C78C2229FBD600319EC1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2F95C78D2229FBED00319EC1 /* ProductSummaryTableViewCell.swift */,
+				2F95C78E2229FBED00319EC1 /* ProductSummaryTableViewCell.xib */,
+				2F95C7912229FC1300319EC1 /* ProductSummaryHeaderTableViewCell.swift */,
+				2F95C7922229FC1300319EC1 /* ProductSummaryHeaderTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		2FEE6B1622255BF3004E3F49 /* ProductList */ = {
@@ -230,6 +280,8 @@
 				2FEE6B252225628D004E3F49 /* Product.swift */,
 				2FEE6B272225646A004E3F49 /* CabError.swift */,
 				2F95C7372226BAFF00319EC1 /* Discount.swift */,
+				2F95C7842229837900319EC1 /* Summary.swift */,
+				2F95C786222983B200319EC1 /* ProductSummary.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -379,11 +431,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F95C78B2229FA9100319EC1 /* SummaryViewController.xib in Resources */,
 				2F95C72B2225E84000319EC1 /* Localizable.strings in Resources */,
+				2F95C7902229FBED00319EC1 /* ProductSummaryTableViewCell.xib in Resources */,
 				2F4EDD542224A1AA004DF126 /* LaunchScreen.storyboard in Resources */,
 				2F95C73D22271E4A00319EC1 /* ModalViewController.xib in Resources */,
 				2F95C7282225E4D200319EC1 /* ProductTableViewCell.xib in Resources */,
 				2FEE6B452225DA61004E3F49 /* ProductListViewController.xib in Resources */,
+				2F95C7942229FC1300319EC1 /* ProductSummaryHeaderTableViewCell.xib in Resources */,
 				2F4EDD512224A1AA004DF126 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +528,8 @@
 			files = (
 				2FEE6B2322255E90004E3F49 /* ReachabilityService.swift in Sources */,
 				2F95C7322225EE4400319EC1 /* ProductListRouter.swift in Sources */,
+				2F95C7962229FE8E00319EC1 /* SummaryModule.swift in Sources */,
+				2F95C78122297B3500319EC1 /* SummaryContract.swift in Sources */,
 				2F95C7342225F02700319EC1 /* SwiftReachability.swift in Sources */,
 				2FEE6B472225DF8A004E3F49 /* Extensions.swift in Sources */,
 				2F95C7382226BAFF00319EC1 /* Discount.swift in Sources */,
@@ -484,17 +541,23 @@
 				2FEE6B3B2225D694004E3F49 /* AbsNetExtensions.swift in Sources */,
 				2FEE6B3C2225D694004E3F49 /* ApiUseCase.swift in Sources */,
 				2FEE6B282225646A004E3F49 /* CabError.swift in Sources */,
+				2F95C7932229FC1300319EC1 /* ProductSummaryHeaderTableViewCell.swift in Sources */,
 				2FEE6B412225D760004E3F49 /* GetProductsUseCase.swift in Sources */,
 				2FEE6B1C22255CB4004E3F49 /* ProductListPresenter.swift in Sources */,
 				2FEE6B2F2225D60D004E3F49 /* ProductListInteractor.swift in Sources */,
 				2F95C73C22271E4A00319EC1 /* ModalViewController.swift in Sources */,
 				2F95C7302225ED6B00319EC1 /* ProductListModule.swift in Sources */,
+				2F95C7852229837900319EC1 /* Summary.swift in Sources */,
 				2FEE6B382225D694004E3F49 /* ApiService.swift in Sources */,
+				2F95C78A2229FA9100319EC1 /* SummaryViewController.swift in Sources */,
 				2FEE6B392225D694004E3F49 /* AbsNetError.swift in Sources */,
+				2F95C787222983B200319EC1 /* ProductSummary.swift in Sources */,
 				2FEE6B3D2225D694004E3F49 /* AbsNetMethod.swift in Sources */,
 				2F4EDD4A2224A1A8004DF126 /* AppDelegate.swift in Sources */,
 				2FEE6B262225628D004E3F49 /* Product.swift in Sources */,
 				2FEE6B2B2225BE11004E3F49 /* Cart.swift in Sources */,
+				2F95C78F2229FBED00319EC1 /* ProductSummaryTableViewCell.swift in Sources */,
+				2F95C78322297BD700319EC1 /* SummaryPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +569,7 @@
 				2FEE6B1822255C18004E3F49 /* ProductListPresenterTest.swift in Sources */,
 				2FEE6B2D2225BE91004E3F49 /* MockCartService.swift in Sources */,
 				2F95C7362226B41E00319EC1 /* CartTest.swift in Sources */,
+				2F95C77F22297B2700319EC1 /* SummaryPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,3 +18,10 @@
 "product_list_no_internet_message" = "El dispositivo no tiene conexión";
 "product_list_data_error" = "Algo fué mal cargando los productos";
 "product_list_not_enough_balance_error" = "No hay suficiente saldo para la compra en tu cuenta.";
+
+"summary_title" = "Resumen";
+"summary_close" = "Cerrar";
+"summary_total" = "Total descontado %.2f€";
+"summary_header_name" = "Nombre";
+"summary_header_count" = "Q.";
+"summary_header_total" = "Total";

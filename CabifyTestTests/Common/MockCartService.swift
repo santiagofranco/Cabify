@@ -14,6 +14,7 @@ class MockCartService: CartService {
     var givenTotal = 0.0
     var givenDiscountedTotal = 0.0
     var givenProducts: [Product] = []
+    var givenSummary = Summary(products: [], discountedTotal: 0.0)
     
     var addProductCalled = false
     var cleanCalled = false
@@ -36,5 +37,9 @@ class MockCartService: CartService {
     
     func getDiscountedTotal() -> Double {
         return givenDiscountedTotal
+    }
+    
+    func getSummary() -> Summary {
+        return givenSummary        
     }
 }

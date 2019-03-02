@@ -14,6 +14,7 @@ protocol CartService: class {
     func getCurrentProducts() -> [Product]
     func clean()
     func getDiscountedTotal() -> Double
+    func getSummary() -> Summary
 }
 
 class Cart: CartService {
@@ -29,10 +30,14 @@ class Cart: CartService {
     }
     
     func getTotal() -> Double {
+        return getTotal(from: currentProducts)
+    }
+    
+    fileprivate func getTotal(from products: [Product]) -> Double {
         var total = 0.0
         
         Product.Code.allCases.forEach { code in
-            let products = self.currentProducts.filter { return $0.code == code }
+            let products = products.filter { return $0.code == code }
             Discount.allCases.forEach {
                 total += $0.getTotalFrom(products: products)
             }
@@ -57,6 +62,27 @@ class Cart: CartService {
         }
         
         return totalNoDiscounted - total
+    }
+    
+    func getSummary() -> Summary {
+        var products: [ProductSummary] = []
+        Product.Code.allCases.forEach { code in
+            let codedProducts = currentProducts
+                .filter { return code == $0.code }
+            
+            guard codedProducts.count > 0 else {
+                return
+            }
+            
+            products.append(
+                ProductSummary(
+                    name: codedProducts.first!.name,
+                    count: codedProducts.count,
+                    total: getTotal(from: codedProducts)))
+            
+        }
+        
+        return Summary(products: products, discountedTotal: getDiscountedTotal())
     }
 }
 

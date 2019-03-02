@@ -61,12 +61,12 @@ extension ProductListPresenter: ProductListViewDelegate {
         interactor.pay(products: cart.getCurrentProducts(), total: cart.getTotal())
     }
     
-    func didTapSeeSummary() {
-        router.goToSummary(from: view)
-    }
-    
     func didTapClean() {
         cart.clean()
+        view.showTotal(cart.getTotal())
+    }
+    
+    func viewDidAppear() {
         view.showTotal(cart.getTotal())
     }
 }
@@ -94,9 +94,7 @@ extension ProductListPresenter: ProductListInteractorDelegate {
     }
     
     func didPaymentSuccess() {
-        view.showPaymentSuccessMessage(totalSaved: cart.getDiscountedTotal())
-        cart.clean()
-        view.showTotal(0)
+        router.goToSummary(from: view)
     }
     
     func didPaymentError(_ error: CabError) {

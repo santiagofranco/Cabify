@@ -18,7 +18,6 @@ class ProductListViewController: UIViewController {
     @IBOutlet weak var totalTitleLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var payButton: UIButton!
-    @IBOutlet weak var summaryButton: UIButton!
     
     var delegate: ProductListViewDelegate?
     var products: [Product] = []
@@ -47,6 +46,11 @@ class ProductListViewController: UIViewController {
         setupSummaryView()
         
         self.delegate?.viewDidLoad()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.delegate?.viewDidAppear()
     }
     
     fileprivate func setupTableView() {
@@ -82,7 +86,6 @@ class ProductListViewController: UIViewController {
         
         totalTitleLabel.text = "products_list_total_title".localized() + ":"
         payButton.setTitle("products_list_pay_button".localized(), for: .normal)
-        summaryButton.setTitle("products_list_summary_button".localized(), for: .normal)
         totalLabel.text = "0.0€"
         
         payButton.setTitleColor(.white, for: .normal)
@@ -99,10 +102,6 @@ class ProductListViewController: UIViewController {
     
     @IBAction func didTapPayButton(_ sender: Any) {
         self.delegate?.didTapPay()
-    }
-    
-    @IBAction func didTapSummaryButton(_ sender: Any) {
-        self.delegate?.didTapSeeSummary()
     }
     
     fileprivate func updateLoading(showing: Bool) {
@@ -190,19 +189,6 @@ extension ProductListViewController: ProductListViewProtocol {
     
     func showTotal(_ total: Double) {
         totalLabel.text = String(format: "%.2f€", total) //Currency could come from backend
-    }
-    
-    func showPaymentSuccessMessage(totalSaved: Double) {
-        UIView.animate(withDuration: 0.5, animations: {
-        }) { finished in
-            
-            let message = totalSaved > 0 ? String(format: "products_list_payment_success_total_saved".localized(), totalSaved) : "products_list_payment_success".localized()
-            
-            let alert = ModalViewController(message: message)
-            alert.addBlurBackground()
-            alert.modalPresentationStyle = .overCurrentContext
-            self.present(alert, animated: true, completion: nil)
-        }
     }
     
     func showNotEnoughBalanceError() {

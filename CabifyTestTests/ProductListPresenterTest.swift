@@ -36,6 +36,9 @@ class ProductListPresenterTest: XCTestCase {
     override func tearDown() {
         view = nil
         interactor = nil
+        router = nil
+        reachability = nil
+        cart = nil
         presenter = nil
     }
     
@@ -221,38 +224,11 @@ class ProductListPresenterTest: XCTestCase {
         
     }
     
-    func test_show_payment_success_message_when_payment_success() {
+    func test_go_to_summary_when_payment_success() {
         
         presenter.didPaymentSuccess()
         
-        XCTAssertTrue(view.showPaymentSuccessMessageCalled)
-        
-    }
-    
-    func test_show_total_saved_when_payment_success() {
-        
-        cart.givenDiscountedTotal = 10.0
-        
-        presenter.didPaymentSuccess()
-        
-        XCTAssertEqual(view.totalSavedShown, cart.givenDiscountedTotal)
-        
-    }
-    
-    func test_clean_cart_when_payment_success() {
-        
-        presenter.didPaymentSuccess()
-        
-        XCTAssertTrue(cart.cleanCalled)
-    }
-    
-    func test_show_total_0_when_payment_success() {
-        
-        presenter.didPaymentSuccess()
-        
-        XCTAssertTrue(view.showTotalCalled)
-        XCTAssertEqual(view.totalShown, 0.0)
-        
+        XCTAssertTrue(router.goToSummaryCalled)
     }
     
     func test_show_not_enough_balance_error_when_payment_fails_with_not_enough_balance_error() {
@@ -276,13 +252,6 @@ class ProductListPresenterTest: XCTestCase {
         
     }
     
-    func test_go_to_summary_when_user_tap_see_summary_button() {
-        
-        presenter.didTapSeeSummary()
-        
-        XCTAssertTrue(router.goToSummaryCalled)
-    }
-    
     func test_reset_cart_when_user_taps_on_clean() {
         
         presenter.didTapClean()
@@ -294,6 +263,17 @@ class ProductListPresenterTest: XCTestCase {
         presenter.didTapClean()
         
         XCTAssertTrue(view.showTotalCalled)
+    }
+    
+    func test_show_total_when_view_did_appear() {
+        
+        let givenTotal = 10.0
+        cart.givenTotal = givenTotal
+        
+        presenter.viewDidAppear()
+        
+        XCTAssertTrue(view.showTotalCalled)
+        XCTAssertEqual(view.totalShown, givenTotal)
     }
     
     fileprivate func givenProducts() -> [Product] {

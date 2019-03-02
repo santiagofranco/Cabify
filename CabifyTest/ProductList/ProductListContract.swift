@@ -17,7 +17,6 @@ protocol ProductListViewProtocol: class {
     func showDataErrorMessage()
     func hideLoading()
     func showTotal(_ total: Double)
-    func showPaymentSuccessMessage(totalSaved: Double)
     func showNotEnoughBalanceError()
 }
 
@@ -28,8 +27,8 @@ protocol ProductListViewDelegate: class {
     func didTapRetry()
     func didTapProduct(_ product: Product)
     func didTapPay()
-    func didTapSeeSummary()
     func didTapClean()
+    func viewDidAppear() 
     
 }
 

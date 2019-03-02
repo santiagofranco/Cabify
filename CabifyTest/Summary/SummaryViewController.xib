@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SummaryViewController" customModule="CabifyTest" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="8lq-AS-5Ag" id="2pp-3G-zUD"/>
+                <outlet property="container" destination="RoX-MZ-m0S" id="8Rv-aT-3dh"/>
+                <outlet property="tableView" destination="NLF-Rc-WZG" id="riS-4O-2ww"/>
+                <outlet property="titleLabel" destination="9U1-8L-h7Z" id="naL-pU-5tY"/>
+                <outlet property="totalLabel" destination="O1R-TG-12y" id="EVA-cB-yv1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RoX-MZ-m0S">
+                    <rect key="frame" x="0.0" y="147" width="375" height="570"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9U1-8L-h7Z">
+                            <rect key="frame" x="20" y="20" width="335" height="26"/>
+                            <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="22"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lq-AS-5Ag">
+                            <rect key="frame" x="20" y="470" width="335" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="didTapClose:" destination="-1" eventType="touchUpInside" id="h9a-TB-o8Z"/>
+                            </connections>
+                        </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NLF-Rc-WZG">
+                            <rect key="frame" x="10" y="66" width="355" height="339"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1R-TG-12y">
+                            <rect key="frame" x="10" y="425" width="355" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="uZx-vQ-FE2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="NLF-Rc-WZG" firstAttribute="leading" secondItem="RoX-MZ-m0S" secondAttribute="leading" constant="10" id="0Mn-7p-Ps4"/>
+                        <constraint firstItem="NLF-Rc-WZG" firstAttribute="top" secondItem="9U1-8L-h7Z" secondAttribute="bottom" constant="20" id="5Us-NV-HfZ"/>
+                        <constraint firstAttribute="trailing" secondItem="O1R-TG-12y" secondAttribute="trailing" constant="10" id="Alu-2M-nox"/>
+                        <constraint firstItem="9U1-8L-h7Z" firstAttribute="leading" secondItem="RoX-MZ-m0S" secondAttribute="leading" constant="20" id="NSj-q8-8Bv"/>
+                        <constraint firstAttribute="trailing" secondItem="9U1-8L-h7Z" secondAttribute="trailing" constant="20" id="TCo-aZ-rKZ"/>
+                        <constraint firstAttribute="trailing" secondItem="NLF-Rc-WZG" secondAttribute="trailing" constant="10" id="Wpc-QK-LpX"/>
+                        <constraint firstAttribute="bottom" secondItem="8lq-AS-5Ag" secondAttribute="bottom" constant="70" id="aDI-uG-H4U"/>
+                        <constraint firstItem="8lq-AS-5Ag" firstAttribute="leading" secondItem="RoX-MZ-m0S" secondAttribute="leading" constant="20" id="eVu-Ft-BJc"/>
+                        <constraint firstAttribute="trailing" secondItem="8lq-AS-5Ag" secondAttribute="trailing" constant="20" id="hGs-th-IsX"/>
+                        <constraint firstItem="O1R-TG-12y" firstAttribute="leading" secondItem="RoX-MZ-m0S" secondAttribute="leading" constant="10" id="maQ-3C-X0Y"/>
+                        <constraint firstItem="O1R-TG-12y" firstAttribute="top" secondItem="NLF-Rc-WZG" secondAttribute="bottom" constant="20" id="q4O-XP-ZMW"/>
+                        <constraint firstItem="8lq-AS-5Ag" firstAttribute="top" secondItem="O1R-TG-12y" secondAttribute="bottom" constant="20" id="sYZ-1u-zbk"/>
+                        <constraint firstAttribute="height" constant="570" id="uMG-DN-rlA"/>
+                        <constraint firstItem="9U1-8L-h7Z" firstAttribute="top" secondItem="RoX-MZ-m0S" secondAttribute="top" constant="20" id="wyo-TN-9YC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RoX-MZ-m0S" secondAttribute="trailing" id="ZSn-54-Txj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RoX-MZ-m0S" secondAttribute="bottom" constant="-50" id="j2n-eF-Ufo"/>
+                <constraint firstItem="RoX-MZ-m0S" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zh0-wj-1C1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
+        </view>
+    </objects>
+</document>
